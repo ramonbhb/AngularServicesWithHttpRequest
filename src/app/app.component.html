@@ -1,2 +1,29 @@
 <h1>Meu site funciona :)</h1>
-<h2>{{ login }} </h2>
+
+<form #cadastroUser="ngForm" (ngSubmit)="onSubmit(cadastroUser)">
+    <div class="form-group">
+        <label>Nome:</label>
+        <input type="text" name="nome" [(ngModel)]="usuario.nome" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>E-mail:</label>
+        <input type="email" name="email" [(ngModel)]="usuario.email" class="form-control">
+    </div>
+    <div class="form-group">
+        <label>Senha:</label>
+        <input type="password" name="senha" [(ngModel)]="usuario.senha" class="form-control">
+    </div>
+    <div class="form-group">
+        <select class="form-control" name="time" [(ngModel)]="usuario.time">
+            <option value="" selected>SELECIONE...</option>
+            <option *ngFor="let time of Futebol" [value]='time'>
+                {{time}}
+            </option>
+        </select>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-danger btn-block">
+            Enviar
+        </button>
+    </div>    
+</form>

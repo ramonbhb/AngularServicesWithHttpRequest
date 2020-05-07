@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { ApiHttpService  } from './api-http.service';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -10,7 +12,9 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,  
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    NgbModule
   ],
   providers: [ApiHttpService, HttpClientModule],
   bootstrap: [AppComponent]

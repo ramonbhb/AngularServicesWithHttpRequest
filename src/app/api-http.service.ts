@@ -6,7 +6,6 @@ import { HttpClient } from '@angular/common/http'
 })
 
 export class ApiHttpService {
-
   private gitHubUrl = 'https://api.github.com/users/';
   private JsonExample = 'https://jsonplaceholder.typicode.com/posts';
   user: any;  
